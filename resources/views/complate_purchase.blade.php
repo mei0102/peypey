@@ -11,7 +11,6 @@
                 <div class="p-6 text-gray-900">
                 購入が完了しました。<br><br>
                 購入金額<br>
-                {{ $c }}aaa
                 <?php
                     if($c > 100000000){
                         header('Location: http://127.0.0.1:8000/home');
