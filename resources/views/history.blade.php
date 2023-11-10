@@ -14,16 +14,16 @@
                     <table class="table table-striped">
                     <thead>
                         <tr>
-                        <th>購入額</th>
-                        <th>所持金</th>
+                        <th>購入額</th><td></td>
+                        <th>所持金</th><td></td>
                         <th>購入日</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($amount_data as $a_data)
                         <tr>
-                        <td>{{ $a_data->purchase_amount }}円</td>
-                        <td>{{ $a_data->current_amount }}円</td>
+                        <td>{{ number_format($a_data->purchase_amount) }}円</td><td></td>
+                        <td>{{ number_format($a_data->current_amount) }}円</td><td></td>
                         <td>{{ $a_data->created_at }}</td>
                         </tr>
                         @endforeach

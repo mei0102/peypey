@@ -15,14 +15,17 @@
                         $a = (int)$c_amount;
                         if($a > 100000000){
                             foreach ($flag as $f){
-                                echo "おめでとう！！！これで君も億万長者！！！<br>".$f->flagdayo. "<br><br>";
+                                echo "おめでとう！！！これで君も億り人！！！<br>".$f->flagdayo. "<br><br>";
                             }
                         }
-                        echo "現在の残高:".$a_data->current_amount."円<br>";
+                        echo "現在の残高:".number_format($a_data->current_amount)."円<br>";
                         echo "最終購入日時:" . $a_data->created_at;
                     }
                     ?>
+                <br><br>
+
                 </div>
+
             </div>
         </div>
     </div>

@@ -38,6 +38,7 @@ Route::middleware('auth')->group(function () {
     
     //homeページを表示
     Route::get('/home', [HomeController::class, 'get_current_amount'])->name('home');
+    Route::post('/home', [SearchController::class, 'result'])->name('search-result');
     
     //purchaseページを表示
     Route::get('/purchase', [PurchaseController::class, 'get_purchase'])->name('purchase');

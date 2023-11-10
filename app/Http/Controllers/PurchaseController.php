@@ -7,6 +7,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\Models\History;
+use App\Http\Requests\ValidateAmount;
 
 class PurchaseController extends Controller
 {
@@ -17,9 +18,13 @@ class PurchaseController extends Controller
     }
 
     //フォーム送信を受け取る
-    public function post_purchase(Request $request){
+    public function post_purchase(ValidateAmount $request){
         //入力された値段
         $amount = $request->input('amount');
+        //バリデーションチェック
+        #$validated = $request->validate([
+        #    'amount' => 'required | max:2147483647',
+        #]);
         //historyテーブルに記録
         $id = auth()->id();
         $time = new Carbon(Carbon::now());
