@@ -33,7 +33,7 @@ class PurchaseController extends Controller
         $current_amount = DB::select("select current_amount from histories where user_id = $id ORDER BY id DESC LIMIT 1");
         $c_amount = $current_amount[0]->current_amount; // 必要な値を取り出す
         //現在の所持金 - 入力値
-        $a = (int)$c_amount;
+        $a = (float)$c_amount;
         $b = (int)$amount;
         $c = ($a - $b);
         
