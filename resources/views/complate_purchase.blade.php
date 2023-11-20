@@ -13,7 +13,7 @@
                 購入金額<br>
                 <?php
                     if($c > 100000000){
-                        header('Location: http://127.0.0.1:8000/home');
+                        header('Location: https://touri0102.net/peypey/public/home');
                         exit();
                     }
                 ?>
